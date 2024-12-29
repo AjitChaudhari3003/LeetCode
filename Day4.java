@@ -24,3 +24,32 @@ class Solution {
         return count;
     }
 }
+
+// end
+
+// Longest Sub-Array with Sum K
+// Given an array arr[] containing integers and an integer k, your task is to find the length of the longest subarray 
+// where the sum of its elements is equal to the given value k. It is guaranteed that a valid subarray exists.
+// Examples:
+// Input: arr[] = [10, 5, 2, 7, 1, 9], k = 15
+// Output: 4
+// Explanation: The subarray [5, 2, 7, 1] has a sum of 15 and length 4.
+
+//CODE
+
+class Solution {
+    public int lenOfLongestSubarr(int[] arr, int k) {
+        int maxLength=0;
+        int n=arr.length;
+        for (int i=0;i<n;i++){
+            int sum=0;
+            for (int j=i;j<n;j++){
+                sum +=arr[j];
+                if(sum==k){
+                    maxLength = Math.max(maxLength, j - i + 1);
+                }
+            }
+        }
+      return maxLength;  
+    }
+}
