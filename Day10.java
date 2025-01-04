@@ -32,3 +32,39 @@ class Solution {
         return prefix;
     }
 }
+
+// end
+
+// 242. Valid Anagram
+// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+// Example 1:
+// Input: s = "anagram", t = "nagaram"
+// Output: true
+// Example 2:
+// Input: s = "rat", t = "car"
+// Output: false
+
+// CODE
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        if(s.length() != t.length()){
+            return false;
+        }
+        int[] charCount =  new int[26];
+
+        for(char c :s.toCharArray()){
+           charCount[c - 'a']++;
+        }
+        for(char c : t.toCharArray()){
+            charCount[c-'a']--;
+        }
+
+        for(int count : charCount ){
+            if(count != 0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
