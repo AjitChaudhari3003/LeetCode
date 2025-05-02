@@ -4,7 +4,7 @@
 // When a vertical domino has dominoes falling on it from both sides, it stays still due to the balance of the forces.
 // For the purposes of this question, we will consider that a falling domino expends no additional force to a falling or already fallen domino.
 // You are given a string dominoes representing the initial state where:
-// dominoes[i] = 'L', if the ith domino has been pushed to the left,
+// dominoes[i] = 'L', if the ith domino has been pushed to the left
 // dominoes[i] = 'R', if the ith domino has been pushed to the right, and
 // dominoes[i] = '.', if the ith domino has not been pushed.
 // Return a string representing the final state.
