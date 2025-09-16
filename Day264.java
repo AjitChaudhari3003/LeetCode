@@ -19,6 +19,7 @@
 // Thus, the final modified array is [12,7,6].
 // Note that there are other ways to obtain the same resultant array.
 
+
 class Solution {
     public List<Integer> replaceNonCoprimes(int[] nums) {
         List<Integer> stack = new ArrayList<>();
